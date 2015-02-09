@@ -131,7 +131,11 @@
 
 	$(document).ready(function() {
 		var seaDragonAssetsPath = "https://s3.amazonaws.com/assets-juxtaeditions/assets/"
-		var publishedView = new HumEditViewer.PublishedView({ el: $("#hum-edit-published"), seaDragonAssetsPath: seaDragonAssetsPath });
+        var externalContentPath = "/lost/catalog/"
+		var publishedView = new HumEditViewer.PublishedView({
+            el: $("#hum-edit-published"),
+            seaDragonAssetsPath: seaDragonAssetsPath,
+            externalContentPath: externalContentPath });
 		publishedView.render();	
 		
 		$("#accordion .panel-heading").on("click", function(e) {
